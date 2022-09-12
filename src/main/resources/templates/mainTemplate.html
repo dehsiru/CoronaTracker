@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corona Tracker</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+    <nav class="teal">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"> Corona Tracker</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <table>
+            <tr>
+                <th>Place</th>
+                <th>Confirmed</th>
+                <th>Active</th>
+                <th>Recovered</th>
+            </tr>
+            <tr th:each="corona : ${coronaData}">
+                <td th:text="${corona.combinedKey}"> </td>
+                <td th:text="${corona.confirmed}"> </td>
+                <td th:text="${corona.active}"> </td>
+                <td th:text="${corona.recovered}"> </td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
